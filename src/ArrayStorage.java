@@ -14,6 +14,9 @@ public class ArrayStorage {
     }
 
     void save(Resume r) {
+        for (int i = 0; i < ind; i++) {
+            if(storage[i].uuid.equals(r.uuid)) return;
+        }
         storage[ind] = r;
         ind++;
     }
